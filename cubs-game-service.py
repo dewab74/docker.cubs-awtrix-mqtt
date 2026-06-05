@@ -50,7 +50,7 @@ POLL_LIVE = int(os.getenv("POLL_LIVE", "30"))  # 30 s — game in progress
 POLL_FINAL = int(os.getenv("POLL_FINAL", "300"))  # 5 min — game ended today
 
 # Game statuses considered "live" by the MLB Stats API
-LIVE_STATUSES = {"In Progress", "Warmup", "Pre-Game", "Delayed: Rain", "Delayed"}
+LIVE_STATUSES = {"In Progress", "Delayed: Rain", "Delayed"}
 FINAL_STATUSES = {"Final", "Game Over", "Completed Early", "Completed Early: Rain"}
 
 # ── team colors ────────────────────────────────────────────────────────────────

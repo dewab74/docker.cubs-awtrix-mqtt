@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cubs-game-config
+  namespace: default
+data:
+  MQTT_BROKER_URL: "mqtt://home-assistant.example.com:1883"
+  AWTRIX_DEVICE: "awtrix"
+  MQTT_TOPIC: "awtrix/custom/cubs_game_next"
+  MQTT_STANDINGS_TOPIC: "awtrix/custom/cubs_standings"
+  MQTT_CLIENT_ID: "cubs-game-service"
+  MQTT_RETAIN: "false"
+  MQTT_ICON: "40217"
+  MQTT_WIN_ICON: "74405"
+  MQTT_DURATION: "5"
+  MQTT_DURATION_LIVE: "7"
+  MQTT_SCROLL: "true"
+  MQTT_COLOR: "#002C5F"
+  POLL_NO_GAMES: "14400"
+  POLL_UPCOMING: "900"
+  POLL_TODAY: "300"
+  POLL_LIVE: "30"
+  POLL_FINAL: "300"

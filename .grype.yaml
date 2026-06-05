@@ -1,0 +1,26 @@
+# Suppress findings that have no available fix and low exploitability.
+# Revisit when upstream releases patches.
+ignore:
+  # ── Python runtime — no fix released for any stable 3.x branch ──────────────
+  - vulnerability: CVE-2026-6100   # no upstream fix
+  - vulnerability: CVE-2026-7210   # fix only in 3.15 pre-release
+  - vulnerability: CVE-2026-4786   # no upstream fix
+  - vulnerability: CVE-2026-3298   # no upstream fix
+  - vulnerability: CVE-2026-6019   # no upstream fix
+  - vulnerability: CVE-2026-1502   # no upstream fix
+
+  # ── Debian system packages — won't-fix by maintainers ────────────────────────
+  - vulnerability: CVE-2026-5450   # libc — won't fix
+  - vulnerability: CVE-2026-5928   # libc — won't fix
+  - vulnerability: CVE-2026-5435   # libc — won't fix
+  - vulnerability: CVE-2026-6238   # libc — won't fix
+  - vulnerability: CVE-2026-8376   # perl-base — won't fix
+  - vulnerability: CVE-2026-3184   # util-linux — won't fix
+  - vulnerability: CVE-2026-27456  # util-linux — won't fix
+  - vulnerability: CVE-2025-6141   # ncurses — won't fix
+  - vulnerability: CVE-2025-69720  # ncurses — won't fix
+  - vulnerability: CVE-2026-34743  # liblzma — won't fix
+  - vulnerability: CVE-2026-42250  # libbz2 — won't fix
+  - vulnerability: CVE-2026-5704   # tar — won't fix
+  - vulnerability: CVE-2026-27171  # zlib — won't fix
+  - vulnerability: CVE-2026-40228  # systemd — won't fix

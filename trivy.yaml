@@ -1,0 +1,5 @@
+vulnerability:
+  ignore-unfixed: true
+  severity:
+    - CRITICAL
+    - HIGH

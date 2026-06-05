@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cubs-game-service
+  namespace: default
+  labels:
+    app: cubs-game-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cubs-game-service
+  template:
+    metadata:
+      labels:
+        app: cubs-game-service
+    spec:
+      containers:
+        - name: cubs-game-service
+          image: your-registry/cubs-game-service:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: cubs-game-config
+            - secretRef:
+                name: cubs-game-secret
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
+          # No ports — this is a pure MQTT publisher, no inbound traffic.
+      restartPolicy: Always
